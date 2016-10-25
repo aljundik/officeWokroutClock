@@ -3,83 +3,93 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-// 'starter.services' is found in services.js
-// 'starter.controllers' is found in controllers.js
-var myApp= angular.module('starter', ['ionic', 'starter.controllers', 'angular-svg-round-progressbar'])
+var myApp =angular.module('starter', ['ionic','angular-svg-round-progressbar'])
 
-.run(function($ionicPlatform) {
+myApp.run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
-    // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
-    // for form inputs)
-    if (window.cordova && window.cordova.plugins && window.cordova.plugins.Keyboard) {
+    if(window.cordova && window.cordova.plugins.Keyboard) {
+      // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
+      // for form inputs)
       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
-      cordova.plugins.Keyboard.disableScroll(true);
 
+      // Don't remove this line unless you know what you are doing. It stops the viewport
+      // from snapping when text inputs are focused. Ionic handles this internally for
+      // a much nicer keyboard experience.
+      cordova.plugins.Keyboard.disableScroll(true);
     }
-    if (window.StatusBar) {
-      // org.apache.cordova.statusbar required
+    if(window.StatusBar) {
       StatusBar.styleDefault();
     }
   });
-})
+});
 
-.config(function($stateProvider, $urlRouterProvider) {
-
-  // Ionic uses AngularUI Router which uses the concept of states
-  // Learn more here: https://github.com/angular-ui/ui-router
-  // Set up the various states which the app can be in.
-  // Each state's controller can be found in controllers.js
-  $stateProvider
-
-  // setup an abstract state for the tabs directive
-    .state('tab', {
-    url: '/tab',
-    abstract: true,
-    templateUrl: 'templates/tabs.html'
-  })
-
-  // Each tab has its own nav history stack:
-
-  .state('tab.dash', {
-    url: '/dash',
-    views: {
-      'tab-dash': {
-        templateUrl: 'templates/tab-dash.html',
-        controller: 'DashCtrl'
-      }
+myApp.controller('timerCtrl',function($scope, $timeout){
+    $scope.myTimerFixed = 5;
+    $scope.myTimer = 5;
+    
+    
+    // var svg = document.getElementByClassName('round-progress')[0];
+     
+    // // svg.onload = function(){
+    // //   $scope.radius = svg.getBoundingClientRect().width/2;
+    // // };
+    var myTimerVariable;
+    
+     $scope.myCustomTimer= function (){
+       $scope.myTimer--;  
+       
+       if($scope.myTimer == 0){
+         
+         $timeout.cancel(myTimerVariable);
+         complete(false);
+         return false;
+         
+       }
+      
+      myTimerVariable = $timeout($scope.myCustomTimer,1000);
     }
-  })
-
-  .state('tab.chats', {
-      url: '/chats',
-      views: {
-        'tab-chats': {
-          templateUrl: 'templates/tab-chats.html',
-          controller: 'ChatsCtrl'
-        }
-      }
-    })
-    .state('tab.chat-detail', {
-      url: '/chats/:chatId',
-      views: {
-        'tab-chats': {
-          templateUrl: 'templates/chat-detail.html',
-          controller: 'ChatDetailCtrl'
-        }
-      }
-    })
-
-  .state('tab.account', {
-    url: '/account',
-    views: {
-      'tab-account': {
-        templateUrl: 'templates/tab-account.html',
-        controller: 'AccountCtrl'
-      }
+    $scope.start = function(){
+      myTimerVariable = $timeout($scope.myCustomTimer,1000);
     }
-  });
-
-  // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/dash');
-
+    $scope.stop = function(){
+       
+       $timeout.cancel(myTimerVariable);
+       complete(true);
+    };
+    
+    var complete = function(foreFulAbort){
+      
+      if(foreFulAbort) {
+        
+        alert('Keep working');
+      }else {
+        
+        alert('you completed the exercise');
+      }
+      
+    };
+    
+    $scope.getStyle = function(){
+      
+      var transform = 'translateY(-50%) translateX(-50%)';
+      
+      return {
+        
+        'top' : '50%',
+        'bottom' : 'auto',
+        'left' : '50%',
+        'transform' : transform,
+        
+        '-moz-transform' : transform,
+        '-webkit-transform' : transform,
+        'font-size' : $scope.radius/3.5+ 'px'
+        
+        
+        
+      };
+      
+      
+      
+    };
+  
 });

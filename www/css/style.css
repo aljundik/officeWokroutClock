@@ -1,1 +1,19 @@
 /* Empty. Add your own CSS if you like */
+/* Empty. Add your own CSS if you like */
+#bigCircle {
+    
+    width: 60%;
+    margin: auto;
+}
+.progress {
+    
+    position: absolute;
+    color: #bbb;
+    font-weight: 100;
+    line-height: 1;
+}
+
+.progress-wrapper {
+    
+    position: relative;
+}
