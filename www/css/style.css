@@ -1,1 +1,27 @@
 /* Empty. Add your own CSS if you like */
+
+.card-progress {
+  background-color: #A4B54D !important;
+}
+
+.item-transp {
+    background-color: transparent !important;
+}
+
+.mb {
+    text-align: center !important;
+}
+
+.mbimg {
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+h1 {
+    font-size: 150% !important;
+    font-weight: bold !important;
+}
+
+h2 {
+    font-size: 150% !important;
+}
