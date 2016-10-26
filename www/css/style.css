@@ -47,3 +47,20 @@ h2 {
     font-size: 120%;
     font-weight: bold;
 }
+#bigCircle {
+    
+    width: 60%;
+    margin: auto;
+}
+.progress {
+    
+    position: absolute;
+    color: #bbb;
+    font-weight: 100;
+    line-height: 1;
+}
+
+.progress-wrapper {
+    
+    position: relative;
+}
