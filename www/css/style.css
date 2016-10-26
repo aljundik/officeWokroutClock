@@ -1,19 +1,49 @@
 /* Empty. Add your own CSS if you like */
-/* Empty. Add your own CSS if you like */
-#bigCircle {
-    
-    width: 60%;
-    margin: auto;
-}
-.progress {
-    
-    position: absolute;
-    color: #bbb;
-    font-weight: 100;
-    line-height: 1;
+
+body {
+  background-color: #CCFFCC !important;
 }
 
-.progress-wrapper {
-    
-    position: relative;
+.bkg-transp {
+    background-color: transparent !important;
+}
+
+.item-transp {
+    background-color: transparent !important;
+}
+
+.mb {
+    text-align: center !important;
+}
+
+h1 {
+    font-size: 150% !important;
+    font-weight: bold !important;
+    margin-top: 10px !important;
+}
+
+h2 {
+    font-size: 150% !important;
+    margin-bottom: 20px !important;
+    text-align: center;
+}
+
+#intro {
+    padding: 50px 30px 20px 30px;
+    font-size: 150%;
+    font-stretch: expanded;
+    text-align: center;
+}
+
+#stats {
+    padding:50px 30px 10px 30px;
+}
+
+.p-guide {
+    padding: 50px 50px 0 50px;
+}
+
+.chapter {
+    font-size: 120%;
+    font-weight: bold;
 }
