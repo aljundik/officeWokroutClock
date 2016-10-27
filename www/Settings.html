@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>Settings - Office Worout</title>
+
+    <link rel="manifest" href="manifest.json">
+
+    <!-- un-comment this code to enable service worker
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(() => console.log('service worker installed'))
+          .catch(err => console.log('Error', err));
+      }
+    </script>-->
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+     <script src="js/progressbar.js"></script>
+    <script type="text/javascript" src="https://raw.githubusercontent.com/crisbeto/angular-svg-round-progressbar/master/build/roundProgress.min.js"></script>
+
+<!--     <script src="js/timerprogress-bar.js"></script>
+ -->
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/services.js"></script>
+  </head>
+  <body ng-app="starter" ng-controller="timerCtrl">
+  
+     <div class="bar bar-header bar-calm">
+      <a href="index.html" class="button button-icon icon ion-arrow-left-c"></a>
+      <div class="h1 title bar-balanced">Office Workout</div>
+      <a href="Settings.html" class="button button-icon icon ion-gear-a"></a>
+    </div>
+    <br><br><br>
+    <div style="padding-left: 10%;padding-right: 10%">
+      <div class="row responsive-sm">
+        <div class="col"><center>Eyes Exercise</center></div> 
+      </div><br>
+      <ion-pane>
+            <ion-content class="padding has-header">
+              <h5 class="chapter">Setting</h5><br>
+              <ul class="list">
+
+              
+              <li class="item item-Select">
+              working Hours<br><br>
+                <label class="item item-input item-select">
+                  <div class="input-label">
+                    From
+                  </div>
+                  <select>
+                    <option selected>Select hour from</option>
+                    <option value="1">1:00</option>
+                    <option value="2">2:00</option>
+                    <option value="3">3:00</option>
+                    <option value="4">4:00</option>
+                    <option value="5">5:00</option>
+                    <option value="6">6:00</option>
+                    <option value="7">7:00</option>
+                    <option value="8">8:00</option>
+                    <option value="9">9:00</option>
+                    <option value="10">10:00</option>
+                    <option value="11">11:00</option>
+                    <option value="12">12:00</option>
+                    <option value="13">13:00</option>
+                    <option value="14">14:00</option>
+                    <option value="15">15:00</option>
+                    <option value="16">16:00</option>
+                    <option value="17">17:00</option>
+                    <option value="18">18:00</option>
+                    <option value="19">19:00</option>
+                    <option value="20">20:00</option>
+                    <option value="21">21:00</option>
+                    <option value="22">22:00</option>
+                    <option value="23">23:00</option>
+                    <option value="24">24:00</option>
+                  </select>
+                </label>
+                <label class="item item-input item-select">
+                  <div class="input-label">
+                    To
+                  </div>
+                  <select>
+                    <option selected>Select hour to</option>
+                    <option value="1">1:00</option>
+                    <option value="2">2:00</option>
+                    <option value="3">3:00</option>
+                    <option value="4">4:00</option>
+                    <option value="5">5:00</option>
+                    <option value="6">6:00</option>
+                    <option value="7">7:00</option>
+                    <option value="8">8:00</option>
+                    <option value="9">9:00</option>
+                    <option value="10">10:00</option>
+                    <option value="11">11:00</option>
+                    <option value="12">12:00</option>
+                    <option value="13">13:00</option>
+                    <option value="14">14:00</option>
+                    <option value="15">15:00</option>
+                    <option value="16">16:00</option>
+                    <option value="17">17:00</option>
+                    <option value="18">18:00</option>
+                    <option value="19">19:00</option>
+                    <option value="20">20:00</option>
+                    <option value="21">21:00</option>
+                    <option value="22">22:00</option>
+                    <option value="23">23:00</option>
+                    <option value="24">24:00</option>
+                  </select>
+                  </select>
+                </label>
+              </li>
+              <li class="item item-select">
+                <label class="item item-input item-select">
+                  <div class="input-label">
+                    Remind me after every
+                  </div>
+                  <select>
+                    <option selected>Select hour</option>
+                    <option value="1">1:00</option>
+                    <option value="2">2:00</option>
+                    <option value="3">3:00</option>
+                    <option value="4">4:00</option>
+                    <option value="5">5:00</option>
+                    <option value="6">6:00</option>
+                    <option value="7">7:00</option>
+                    <option value="8">8:00</option>
+                    <option value="9">9:00</option>
+                    <option value="10">10:00</option>
+                    <option value="11">11:00</option>
+                    <option value="12">12:00</option>
+                    <option value="13">13:00</option>
+                    <option value="14">14:00</option>
+                    <option value="15">15:00</option>
+                    <option value="16">16:00</option>
+                    <option value="17">17:00</option>
+                    <option value="18">18:00</option>
+                    <option value="19">19:00</option>
+                    <option value="20">20:00</option>
+                    <option value="21">21:00</option>
+                    <option value="22">22:00</option>
+                    <option value="23">23:00</option>
+                    <option value="24">24:00</option>
+                  </select>
+                  </select>
+                </label>
+                
+              </li>
+              <li class="item item-toggle">
+     Alarm
+     <label class="toggle toggle-assertive">
+       <input type="checkbox">
+       <div class="track">
+         <div class="handle"></div>
+       </div>
+     </label>
+  </li>
+
+              <li class="item">
+              <button class="button button-balanced">Save Settings</button>   <br><br> 
+
+              </li>
+            </ul>
+
+             
+          </ion-content>
+    </ion-pane>
+      </div>
+   <br><br> 
+
+<div class="bar bar-footer bar-balanced">
+  <div class="title">© 2016 Office Workout</div>
+</div>
+
+  </body>
+</html>
