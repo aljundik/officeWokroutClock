@@ -1,9 +1,10 @@
 /* Empty. Add your own CSS if you like */
 
 body {
-  background-color: #CCFFCC !important;
+  background-color: #fff !important;
    font-family: "Comic Sans MS", cursive, sans-serif !important;
     font-size: large !important;
+    
 
 }
 
@@ -32,8 +33,8 @@ h2 {
 }
 
 #intro {
-    padding: 50px 30px 20px 30px;
-    font-size: 150%;
+    padding: 50px;
+    font-size: 30px
     font-stretch: expanded;
     text-align: center;
 }
@@ -66,4 +67,12 @@ h2 {
 .progress-wrapper {
     
     position: relative;
+}
+.imageclass img{
+	width: 40%;
+}
+@media screen and (min-width: 480px) {
+    .imageclass img{
+	width: 70% !important;
+}
 }

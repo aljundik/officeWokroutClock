@@ -28,34 +28,52 @@
 
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
+     <script src="js/progressbar.js"></script>
+    <script type="text/javascript" src="https://raw.githubusercontent.com/crisbeto/angular-svg-round-progressbar/master/build/roundProgress.min.js"></script>
+
+<!--     <script src="js/timerprogress-bar.js"></script>
+ -->
 
     <!-- your app's js -->
     <script src="js/app.js"></script>
     <script src="js/controllers.js"></script>
     <script src="js/services.js"></script>
   </head>
-  <body ng-app="starter">
-    <!--
-      The nav bar that will be updated as we navigate between views.
-    -->
-   
-    <!--
-      The views will be rendered in the <ion-nav-view> directive below
-      Templates are in the /templates folder (but you could also
-      have templates inline in this html file if you'd like).
-    -->
-    <div class="bar bar-header bar-calm">
+  <body ng-app="starter" ng-controller="timerCtrl">
+  
+     <div class="bar bar-header bar-calm">
       <a href="index.html" class="button button-icon icon ion-arrow-left-c"></a>
       <div class="h1 title bar-balanced">Office Workout</div>
-      <a href="settings.html" class="button button-icon icon ion-gear-a"></a>
+      <a href="Settings.html" class="button button-icon icon ion-gear-a"></a>
     </div>
-<ion-content class="padding has-header">
-    <p class="p-guide"><em class="chapter">Start</em> - This is where you start your routine.</p>
-    <p class="p-guide"><em class="chapter">Progress</em> - Check your Meatball to see how well you are doing.</p>
-    <p class="p-guide"><em class="chapter">Trace</em> - See the distance you walk at work. Did you know walking is the most natural exercise?</p>
-</ion-content>
+    <br><br><br>
+    <div style="padding-left: 10%;padding-right: 10%">
+      <div class="row responsive-sm">
+        <div class="col"><center>Eyes Exercise</center></div> 
+      </div><br>
+      <ion-pane>
+            <ion-content class="padding has-header">
+              <p class="p-guide"><em class="chapter">Start</em> - This is where you start your routine. On start page,you have number of activities reted to eyes exercise and shoulder exercise etc. Start button will start your time for exercise and pause or stop button can pause or stop your worout. For next workout, user have a choice to set his/her timer for next workout in setting. See in diagram below:</p>
+              <center>
+                <img  class="responsive-sm" src="img/start1.png">
+              </center>
+              <p class="p-guide"><em class="chapter">Setting</em> - For setthing, you have a number of options related to workout. You can change your working hours from 1-24, reminder duration and alarm settings. See in diagram below: </p>
+              <center>
+              <img  class="responsive-sm" src="img/settings1.png">
+              </center>
+              <p class="p-guide"><em class="chapter">Progress</em> - Meatballs are used to show the progrsss of your workout.Meatball are awarded on your workout and Check your Meatball to see how well you are doing. For intance, if you have 219 point your meatball will look like this</p>
+              <center>
+              <img  class="responsive-sm" src="img/meatballs.png">
+              </center>
+              <p class="p-guide"><em class="chapter">Trace</em> - See the distance you walk at work. Did you know walking is the most natural exercise?</p><br><br>
+          </ion-content>
+    </ion-pane>
+      </div>
+    
+
 <div class="bar bar-footer bar-balanced">
   <div class="title">© 2016 Office Workout</div>
 </div>
+
   </body>
 </html>
